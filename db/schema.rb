@@ -29,13 +29,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_03_073127) do
   end
 
   create_table "properties", force: :cascade do |t|
+    t.integer "account_id"
     t.string "name"
     t.string "address"
     t.integer "price"
     t.integer "rooms"
     t.integer "bathrooms"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_properties_on_account_id"
   end
 
 end
