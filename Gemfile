@@ -19,10 +19,12 @@ gem "devise"
 
 # Ability to add images
 # gem 'fog'
-gem 'carrierwave'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 
 # img resizing
-gem "mini_magick"
+# gem "mini_magick"
+gem 'mini_magick', '~> 4.2', '>= 4.2.4'
+gem "ImageResize", "~> 0.0.5"
 
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -73,7 +75,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "spring"
   gem "spring-watcher-listen"
-  gem "figaro"
+  # gem "figaro"
 end
 
 group :test do

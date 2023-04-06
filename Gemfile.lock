@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ImageResize (0.0.5)
     actioncable (7.0.4.3)
       actionpack (= 7.0.4.3)
       activesupport (= 7.0.4.3)
@@ -82,13 +83,12 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    carrierwave (2.2.3)
-      activemodel (>= 5.0.0)
-      activesupport (>= 5.0.0)
+    carrierwave (3.0.0.beta)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
       addressable (~> 2.6)
       image_processing (~> 1.1)
       marcel (~> 1.0.0)
-      mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
@@ -102,8 +102,6 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     ffi (1.15.5)
-    figaro (1.2.0)
-      thor (>= 0.14.0, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -243,16 +241,16 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  ImageResize (~> 0.0.5)
   bootsnap
   capybara
-  carrierwave
+  carrierwave (>= 3.0.0.beta, < 4.0)
   debug
   devise
-  figaro
   importmap-rails
   jbuilder
   listen
-  mini_magick
+  mini_magick (~> 4.2, >= 4.2.4)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   selenium-webdriver

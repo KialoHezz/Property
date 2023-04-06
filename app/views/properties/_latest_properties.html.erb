@@ -1,0 +1,8 @@
+<% @properties.each do |property| %>
+    <div class="col-3">
+        <h3><strong><%= property.name %></strong></h3>
+        <%= property_thumbnail property %>
+        <p><%= property.address %></p>
+        <p><%= property.created_at %></p>
+    </div>
+<% end %>
