@@ -1,8 +1,8 @@
 <%= render @property %>
 
-<div>
-  <%= link_to "Edit this property", edit_property_path(@property) %> |
-  <%= link_to "Back to properties", properties_path %>
+<div class="container justify-content-center">
+  <%= link_to "Edit", edit_property_path(@property), class:"btn btn-success mt-4" %>
+  <%= link_to "Back", properties_path , class: "btn btn-dark mt-4" %>
 
-  <%= button_to "Destroy this property", @property, method: :delete %>
+  <%= button_to "Destroy", @property, method: :delete , class:"btn btn-danger mt-4"%>
 </div>

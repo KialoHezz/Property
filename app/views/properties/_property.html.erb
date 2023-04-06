@@ -1,27 +1,36 @@
-<div id="<%= dom_id property %>">
-  <p>
-    <strong>Name:</strong>
-    <%= property.name %>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div id="<%= dom_id property %>">
+        <p>
+          <strong>Name:</strong>
+          <%= property.name %>
+        </p>
 
-  <p>
-    <strong>Address:</strong>
-    <%= property.address %>
-  </p>
+        <p>
+          <strong>Address:</strong>
+          <%= property.address %>
+        </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= property.price %>
-  </p>
+        <p>
+          <strong>Price:</strong>
+          <%= property.price %>
+        </p>
 
-  <p>
-    <strong>Rooms:</strong>
-    <%= property.rooms %>
-  </p>
+        <p>
+          <strong>Rooms:</strong>
+          <%= property.rooms %>
+        </p>
 
-  <p>
-    <strong>Bathrooms:</strong>
-    <%= property.bathrooms %>
-  </p>
+        <p>
+          <strong>Bathrooms:</strong>
+          <%= property.bathrooms %>
+        </p>
 
+      </div>
+    </div>
+    <div class="col-4">
+      <%= render "properties/agent_details" %>
+    </div>
+  </div>
 </div>
