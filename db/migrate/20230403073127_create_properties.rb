@@ -9,6 +9,7 @@ class CreateProperties < ActiveRecord::Migration[7.0]
       t.integer :rooms
       t.integer :bathrooms
       t.string :photo
+      t.string :parkinng_spaces
 
       t.timestamps
     end

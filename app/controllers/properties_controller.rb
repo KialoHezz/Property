@@ -1,9 +1,11 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
   # Ensure the user before he 0r she create is Authenticated
-  before_action :authenticate_account!, only: [:new, :create, :destroy]
+  before_action :authenticate_account!, only: [:index, :show]
   # show side bar
   before_action :set_sidebar, except: [:show]
+  # User To edit , delete his or her own post
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /properties or /properties.json
   def index
@@ -17,7 +19,9 @@ class PropertiesController < ApplicationController
 
   # GET /properties/new
   def new
-    @property = Property.new
+    # @property = Property.new
+    @property = current_account.properties.build
+ 
   end
 
   # GET /properties/1/edit
@@ -26,8 +30,9 @@ class PropertiesController < ApplicationController
 
   # POST /properties or /properties.json
   def create
-    @property = Property.new(property_params)
-    @property.account_id = current_account.id
+    # @property = Property.new(property_params)
+    # @property.account_id = current_account.id
+    @property = current_account.properties.build(property_params)
 
 
     respond_to do |format|
@@ -70,12 +75,19 @@ class PropertiesController < ApplicationController
       @property = Property.find(params[:id])
     end
 
+    # correct user to update , delete
+    def correct_user
+      @property = current_account.properties.find_by(id: params[:id])
+      redirect_to property_path, notice: "Not Authorized" if @property.nil?
+    end
+    
+    # show sidebar
     def set_sidebar
       @show_sidebar = true
     end
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
+      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :parking_spaces, :photo, :photo_cache)
     end
 end

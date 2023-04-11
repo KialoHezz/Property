@@ -1,5 +1,26 @@
-<div class="container">
+<div class="property-main-photo">
+  <%= link_to (property_photo_url(@property)) %>
+  <div class="photo-overlay">
+  </div>
+</div>
+<div class="container mt-3">
   <div class="row">
+    <div class="col-6">
+      <p class="m0"><%= @property.address%></p>
+      <p class="h2">For Sales</p>
+      <div class="col-6">
+        <div class="">
+          <%= @property.rooms%>
+        </div>
+        <div class="">
+          <%= @property.bathrooms%>
+        </div>
+        <div class="">
+          <%= @property.parkinng_spaces%>
+        </div>
+      </div>
+    </div>
+    
     <div class="col-8">
       <div id="<%= dom_id property %>">
         <p>
