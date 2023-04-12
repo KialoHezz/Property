@@ -3,14 +3,14 @@
   <div class="photo-overlay">
   </div>
 </div>
+
 <div class="container mt-3">
-  <div class="row">
-    <div class="col-6 d-flex justify-content-between">
+  <div class="row justify-content-between p-2">
+    <div class="col-8 d-flex justify-content-between">
       <div>
         <p class="m0"><%= @property.address%></p>
         <p class="h2"><%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) :"For Sales" %></p>
       </div>
-      <div class="col-6 text-center">
       <div class="row mr-3 bg-light p-2">
           <div class="col-4">
           <p class="m0"><strong>rooms</strong></p>
@@ -26,53 +26,35 @@
           </div>
 
        </div>
-      </div>
     </div>
-    <div class="row border-top border-bottom mt-5 mb-5 pt-4 pb-4">
-      <div class="col-6">
-      <strong><%= link_to "Est. Monthly Repayments of #{ number_to_currency((@property.price / 360)) }", "#", class:"text-success" %></strong>
-      </div>
-      <div class="col-6 text-right">
-        <strong><%= link_to "Can I Afford This Property", "#", class:"text-success" %></strong>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p class="h3">Property Description</p>
-      </div>
-      <div class="col-8 mt-5 text-center">
-        <div id="<%= dom_id property %>">
-          <p>
-            <strong>Name:</strong>
-            <%= property.name %>
-          </p>
-  
-          <p>
-            <strong>Address:</strong>
-            <%= property.address %>
-          </p>
-  
-          <p>
-            <strong>Price:</strong>
-            <%= property.price %>
-          </p>
-  
-          <p>
-            <strong>Rooms:</strong>
-            <%= property.rooms %>
-          </p>
-  
-          <p>
-            <strong>Bathrooms:</strong>
-            <%= property.bathrooms %>
-          </p>
-  
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-4">
+    <div class="4">
       <%= render "properties/agent_details" %>
     </div>
   </div>
+  <div class="row border-top border-bottom mt-5 mb-5 pt-4 pb-4">
+    <div class="col-6">
+      <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price / 360)) }", "#", class:"text-success" %></strong>
+    </div>
+    <div class="col-6 text-right">
+      <strong><%= link_to "Can I Afford This Property", "#", class:"text-success" %></strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <strong><p><%= property.name %></p></strong>
+      <p class="h5">Property Description</p>
+      <div id="prop-details">
+        <%= simple_format @property.details%>
+      </div>
+      <button class="btn btn-info mt-3">Show More</button>
+      <p class="mt-5">To align the items with the rest of the content, it is preferable to add titles and subtitles inside the .card-body.
+        For adding a block of text inside the .card-body without any extra styling, you can use the .card-text class. For example, 
+      </p>
+    </div>
+    <div class="col-4">
+     rgjkaaaaaaaaaaaaaaaaaaaaf
+    </div>
 </div>
+
+
+    
