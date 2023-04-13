@@ -2,9 +2,17 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-var jQuery = require("jquery")
-global.$ = global.jQuery = jQuery
-window.$ = window.jQuery = jQuery
+// var jQuery = require("jquery")
+// global.$ = global.jQuery = jQuery
+// window.$ = window.jQuery = jQuery
 
-require("bootstrap");
-require("./includes/properties");
+// require("bootstrap")
+// require("./includes/properties")
+
+let BtnReadMore = document.getElementById("toggle-details")
+
+BtnReadMore.addEventListener('click', function(){
+    let details = document.getElementById("prop-details");
+    details.classList.toggle("open");
+
+});

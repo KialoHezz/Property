@@ -27,7 +27,7 @@
 
        </div>
     </div>
-    <div class="4">
+    <div class="4 border p-5 text-center">
       <%= render "properties/agent_details" %>
     </div>
   </div>
@@ -46,7 +46,7 @@
       <div id="prop-details">
         <%= simple_format @property.details%>
       </div>
-      <button class="btn btn-info mt-3">Show More</button>
+      <button class="btn btn-outline-info mt-3" id="toggle-details">Read More</button>
       <p class="mt-5">To align the items with the rest of the content, it is preferable to add titles and subtitles inside the .card-body.
         For adding a block of text inside the .card-body without any extra styling, you can use the .card-text class. For example, 
       </p>

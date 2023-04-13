@@ -14,7 +14,13 @@
  *= require_self
  */
  
- .property-main-photo{
-    height: 500px;
-    background-size: cover;
+/* @import 'bootstrap/scss/bootstrap'; */
+
+#prop-details{
+    height: 150px;
+    overflow: hidden;
+
+    &.open {
+      height: auto;
+    }
  }
