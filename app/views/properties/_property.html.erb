@@ -33,7 +33,7 @@
   </div>
   <div class="row border-top border-bottom mt-5 mb-5 pt-4 pb-4">
     <div class="col-6">
-      <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price / 360)) }", "#", class:"text-success" %></strong>
+      <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price - (@property.price * 0.1) / 360), precision: 0) }", "#", class:"text-success" %></strong>
     </div>
     <div class="col-6 text-right">
       <strong><%= link_to "Can I Afford This Property", "#", class:"text-success" %></strong>
@@ -47,8 +47,8 @@
         <%= simple_format @property.details%>
       </div>
       <button class="btn btn-outline-info mt-3" id="toggle-details">Read More</button>
-      <p class="mt-5">To align the items with the rest of the content, it is preferable to add titles and subtitles inside the .card-body.
-        For adding a block of text inside the .card-body without any extra styling, you can use the .card-text class. For example, 
+      <p class="mt-5">
+        * This rate is base on a 30 year Mortgage, After paying an intial 10% down payment. Shorter term mortageswould require a higher monthly Repayments 
       </p>
     </div>
     <div class="col-4">
