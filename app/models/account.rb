@@ -5,6 +5,9 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :validatable,  :trackable
   has_many :properties
 
+  mount_uploader :image, PhotoUploader
+
+
   def full_name
     "Hezron K."
   end
