@@ -9,10 +9,7 @@ class Account < ApplicationRecord
 
 
   def full_name
-    "Hezron K."
+    "#{email}"
   end
 
-  def company
-    "Test Company{M.I.T} "
-  end
 end

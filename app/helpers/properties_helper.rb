@@ -9,4 +9,5 @@ module PropertiesHelper
         img = property.photo.present? ? property.photo.url : "house.jpeg"
         image_tag img, class: "property-photo"
     end
+    
 end

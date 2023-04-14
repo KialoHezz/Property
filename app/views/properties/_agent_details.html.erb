@@ -1,7 +1,10 @@
-<div class="">
+<div class="text-center pt-4 pb-4 ml-3">
+    <div class="mb-2">
+        <%= profile_picture @agent %>
+    </div>
     <h3><strong><%= @agent.full_name %></strong></h3>
-    <%= profile_picture @agent %>
     <p><%= @agent.company%></p>
-    <button class="btn btn-info">Call </button>
-    <button class="btn btn-success">Email</button>
+    
+    <button class="btn btn-info text-uppercase">Call </button>
+    <button class="btn btn-success text-uppercase">Email</button>
 </div>
