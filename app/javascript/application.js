@@ -11,6 +11,15 @@ import "controllers"
 
 // require("./includes/properties")
 
+import toastr from "toastr";
+
+toastr.options = {
+    progressBar: true
+
+}
+
+globalThis.toastr = toastr;
+
 let BtnReadMore = document.getElementById("toggle-details")
 
 BtnReadMore.addEventListener('click', function(){

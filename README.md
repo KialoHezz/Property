@@ -29,3 +29,6 @@ Things you may want to cover:
   <link rel="icon" type="image/png" size="32x32" href="<%= assest_url "favicon-32x32.png"%>" >
   <link rel="icon" type="image/png" size="16x16" href="<%= assest_url "favicon-16x16.png"%>" >
   <link rel="manifest" href="<%= assest_url "site.webmanifest"%>" >
+
+show the flash messages
+  yarn add toostr

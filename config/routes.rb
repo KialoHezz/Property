@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # customized route dashboard
-  get "dashboard" => 'dashboard#index', as: :dashboard
+  get "/dashboard" => 'dashboard#index', as: :dashboard
+  # customize for a profile
+  get "/profile/:id" => 'dashboard#profile', as: :profile
+
   get 'dashboard/properties'
   get 'dashboard/reports'
   resources :properties
