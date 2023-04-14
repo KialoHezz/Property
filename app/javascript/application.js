@@ -7,6 +7,8 @@ import "controllers"
 // window.$ = window.jQuery = jQuery
 
 // require("bootstrap")
+// require("fontawesome-free")
+
 // require("./includes/properties")
 
 let BtnReadMore = document.getElementById("toggle-details")

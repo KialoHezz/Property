@@ -1,5 +1,5 @@
     <h3><strong>Latest</strong></h3>
-    <% @properties.each do |property| %>
+    <% properties.each do |property| %>
         <div class="col-4 p-5">
             <%= link_to (property_thumbnail(property)), property_path(property) %>
         
