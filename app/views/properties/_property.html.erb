@@ -8,12 +8,13 @@
   <div class="row justify-content-between p-2">
     <div class="col-8 d-flex justify-content-between">
       <div>
+        <p><%= @property.for_sale? ? "For Sale" : "For Rent" %></p>
         <p class="m0"><%= @property.address%></p>
         <p class="h2">
           <% if @property.for_sale? %>
-            <%= @property.price > 0 ? number_to_currency(@property.price, precision: 2) :"For Sales" %>
+            <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) :"Offers Accepted" %>
           <% else %>
-            <%= @property.price > 0 ? number_to_currency(@property.price, precision: 1) :"For Rentals" %> / month
+            <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) :"Open for enquiries" %> / month
           <% end %>
         </p>
       </div>
@@ -40,7 +41,7 @@
       <% if @property.for_sale? %>
         <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price - (@property.price * 0.1) / 360), precision: 0) } *", "#", class:"text-success" %></strong>
       <% else %>
-        <strong>Available from : <%= @property.available_date.strftime("%a") %><%= @property.available_date.day.ordinalize %><%= @property.available_date.strftime("%b") %></strong>
+        <strong>Available from : <%= @property.available_date.strftime("%a") %><%= @property.available_date.day.ordinalize %><%= @property.available_date.strftime("%B") %></strong>
       <% end %>
     </div>
     <div class="col-6 text-right">
@@ -62,6 +63,7 @@
     <div class="col-sm-4">
     <div class="4 border p-5 text-center">
     <%= render "properties/agent_details" %>
+    <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=<%= @property.address.to_param %>"  allowfullscreen></iframe>
   </div>
     </div>
     <section id="latest-properties" class="mb-5">
