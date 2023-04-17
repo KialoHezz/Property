@@ -11,19 +11,25 @@ import "controllers"
 
 // require("./includes/properties")
 
-import toastr from "toastr";
+// import toastr from "toastr";
 
-toastr.options = {
-    progressBar: true
+// toastr.options = {
+//     progressBar: true
 
-}
+// }
 
-globalThis.toastr = toastr;
+// globalThis.toastr = toastr;
 
 let BtnReadMore = document.getElementById("toggle-details")
 
 BtnReadMore.addEventListener('click', function(){
     let details = document.getElementById("prop-details");
-    details.classList.toggle("open");
+    console.log(details.classList.toggle("open"));
+
+    // if(details.hasClass("open")){
+    //     console.log(this.textContent("Show Less"));
+    // }else{
+    //     this.classList.toggle("Show More");
+    // }
 
 });

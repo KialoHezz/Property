@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_13_093856) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_17_074155) do
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_093856) do
     t.datetime "updated_at", null: false
     t.integer "parking_spaces", default: 0
     t.text "details"
+    t.boolean "for_sale", default: true
+    t.datetime "available_date"
     t.index ["account_id"], name: "index_properties_on_account_id"
   end
 

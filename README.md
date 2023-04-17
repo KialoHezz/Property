@@ -32,3 +32,7 @@ Things you may want to cover:
 
 show the flash messages
   yarn add toostr
+
+
+Add A column whether user is selling / renting the property
+rails g migration add_for_sale_to_properties for_sale:boolean => check the intention for a particulalr agent
