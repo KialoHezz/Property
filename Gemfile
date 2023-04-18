@@ -26,6 +26,7 @@ gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 gem 'mini_magick', '~> 4.2', '>= 4.2.4'
 gem "ImageResize", "~> 0.0.5"
 
+gem 'jquery-ui-rails'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"

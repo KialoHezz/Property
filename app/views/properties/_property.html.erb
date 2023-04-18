@@ -63,17 +63,18 @@
     <div class="col-sm-4">
     <div class="4 border p-5 text-center">
     <%= render "properties/agent_details" %>
-    <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=<%= @property.address.to_param %>"  allowfullscreen></iframe>
+    <iframe class="ml-0 ml-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=<%= @property.address.to_param %>"  allowfullscreen></iframe>
   </div>
     </div>
     <section id="latest-properties" class="mb-5">
     <div class="container">
-      <h4>Other properties By This Agent</h4>
-      <div class="row">
+    <div class="row">
+    <h4>Other properties By This Agent</h4>
         <%= render "properties/list", properties: @agent_properties %>
       </div>
     </div>
   </section>
+  
 </div>
 
 
