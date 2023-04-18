@@ -8,5 +8,7 @@
     <button class="btn btn-block btn-info text-uppercase" id="show-tel" data-telephone="<%= @agent.telephone %>"><i class="fas fa-phone">Call </button><br/>
 
     <%= link_to "Profile", profile_path(@agent.id), class:"btn btn-secondary text-uppercase" %>
-    <button class="btn btn-success text-uppercase">Email</button>
+    <button class="btn btn-success text-uppercase" data-toggle="modal" data-target="#contact-modal" >Email</button>
+    
+    
 </div>

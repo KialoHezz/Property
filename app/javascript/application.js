@@ -21,14 +21,14 @@ import "controllers"
 // globalThis.toastr = toastr;
 
 // show more for user to read the details.
-// let BtnReadMore = document.getElementById("toggle-details")
+let BtnReadMore = document.getElementById("toggle-details")
 
-// BtnReadMore.addEventListener('click', function(){
-//     let details = document.getElementById("prop-details");
-//     console.log(details.classList.toggle("open"));
+BtnReadMore.addEventListener('click', function(){
+    let details = document.getElementById("prop-details");
+    console.log(details.classList.toggle("open"));
     
 
-// });
+});
 
 
 // show telephone number
@@ -43,13 +43,20 @@ show.addEventListener("click", function(){
 });
 
 
+// email to populate the form.
+let emailBtnModal = document.getElementById("contact-modal");
 
-// $('#exampleModal').on('show.bs.modal', function (event) {
-//     var button = $(event.relatedTarget) // Button that triggered the modal
-//     var recipient = button.data('whatever') // Extract info from data-* attributes
-//     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-//     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-//     var modal = $(this)
-//     modal.find('.modal-title').text('New message to ' + recipient)
-//     modal.find('.modal-body input').val(recipient)
-//   })
+// console.log(emailBtnModal);
+
+emailBtnModal.addEventListener("click", function(){
+    console.log("Modal has fire")
+})
+
+// $('#contact-modal').on('show.bs.modal', function (event) {
+//   var button = $(event.relatedTarget) // Button that triggered the modal
+//   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+//   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+//   let modal = $(this)
+//   modal.find('.modal-title').text('New message to ' + recipient)
+//   modal.find('.modal-body input').val(recipient)
+// })
